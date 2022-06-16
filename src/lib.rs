@@ -176,7 +176,7 @@ pub trait TheGoose<Player, P, R> {
                 .update_player_position(player, &start_position)?;
 
             for p in players {
-                events.push(Event::Return(p.clone(), initial_position));
+                events.push(Event::Prank(p.clone(), end_position, initial_position));
                 self.state_mut()
                     .update_player_position(&p, &initial_position)?;
             }
@@ -539,7 +539,7 @@ mod test {
             Ok(vec![
                 Event::Roll("Pippo", 1, 1),
                 Event::Moved("Pippo", 15, 17),
-                Event::Return("Pluto", 15)
+                Event::Prank("Pluto", 17, 15)
             ])
         );
     }
