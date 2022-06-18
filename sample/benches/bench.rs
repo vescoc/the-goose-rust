@@ -7,7 +7,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         b.iter(|| {
             let mut the_goose = SimpleTheGoose::new((1u32..7u32).cycle());
 
-            let players = vec![SamplePlayer("Pippo"), SamplePlayer("Pluto"), SamplePlayer("Paperino")];
+            let players = vec!["Pippo", "Pluto", "Paperino"];
             for player in &players {
                 the_goose
                     .execute(Command::Add(*player))
