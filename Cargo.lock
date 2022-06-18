@@ -406,6 +406,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "sample"
+version = "0.1.0"
+dependencies = [
+ "criterion",
+ "the_goose",
+]
+
+[[package]]
 name = "scopeguard"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -476,11 +484,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "the-goose-rust"
+name = "the_goose"
 version = "0.1.0"
-dependencies = [
- "criterion",
-]
 
 [[package]]
 name = "tinytemplate"
