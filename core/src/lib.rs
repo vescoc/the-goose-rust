@@ -1,4 +1,4 @@
-use std::ops;
+pub use core::{ops, convert};
 
 pub enum AddPosition<Position> {
     Bounced(Position, Position),
@@ -45,7 +45,7 @@ pub enum PositionType {
     End,
 }
 
-pub trait Position<Roll>: Sized + std::convert::From<u32> {
+pub trait Position<Roll>: Sized + convert::From<u32> {
     fn add(self, r: Roll) -> AddPosition<Self>;
     fn get_type(&self) -> PositionType;
 }
@@ -227,5 +227,3 @@ pub trait TheGoose<Player, P, R> {
 
     fn roll_dice(&mut self) -> R;
 }
-
-pub mod sample;
